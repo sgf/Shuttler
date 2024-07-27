@@ -1,0 +1,29 @@
+﻿             
+/**********************************************************\
+|                                                          |
+| WebSite:  http://overred.cnblogs.com/                    |
+|                                                          |
+| Authors:  overred <overred@gmail.com>                    |
+|                                                          |
+| This file may be distributed and/or modified under the   |
+| terms of the GNU Lesser General Public License (LGPL)    |
+| version 3.0 as published by the Free Software Foundation |
+| and appearing in the included file LICENSE.              |
+|                                                          |
+\**********************************************************/
+
+That's just a SHuttlER................
+Shuttle on RPC
+Shuttle on TCP
+Shuttle on IM
+Shuttle on ProtocolBuffer
+Shuttle on FastInvoker
+             by OveRRed 2009
+
+2010/03/20
++
+ 对结构进行大的调整，解耦方法间泛型依赖性
+ UnitTest
+ 
+_
+ 删除无用的文件

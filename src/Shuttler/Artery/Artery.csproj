@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{61207A01-E64A-428E-9CF4-F4C286AE7106}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shuttler.Artery</RootNamespace>
+    <AssemblyName>Artery</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CrazyCommon\CrazyCacher\CacheBase.cs" />
+    <Compile Include="CrazyCommon\CrazyCacher\CacherBuffer.cs" />
+    <Compile Include="CrazyCommon\CrazyCacher\CacherContext.cs" />
+    <Compile Include="CrazyCommon\CrazyCacher\CompactHeap.cs" />
+    <Compile Include="CrazyCommon\CrazyConfigurator\Configurator.cs" />
+    <Compile Include="CrazyCommon\CrazyDebugger\Debugger.cs" />
+    <Compile Include="CrazyCommon\CrazyDebugger\DebuggerStack.cs" />
+    <Compile Include="CrazyCommon\CrazyDebugger\IDebugger.cs" />
+    <Compile Include="CrazyCommon\CrazyHashingAlgorithm\ConsistentHashingAlgorithm.cs" />
+    <Compile Include="CrazyCommon\CrazyHashingAlgorithm\HashingAlgorithm.cs" />
+    <Compile Include="CrazyCommon\CrazyHashingAlgorithm\HashingManager.cs" />
+    <Compile Include="CrazyCommon\CrazyHelper\CRCHelper.cs" />
+    <Compile Include="CrazyCommon\CrazyHelper\LazyAsyncResult.cs" />
+    <Compile Include="CrazyCommon\CrazyHelper\LockFreeQueue.cs" />
+    <Compile Include="CrazyCommon\CrazyHelper\LockFreeStack.cs" />
+    <Compile Include="CrazyCommon\CrazyInvoke\FastMethodInvoker.cs" />
+    <Compile Include="CrazyCommon\CrazyIO\ByteBufferExtensions.cs" />
+    <Compile Include="CrazyCommon\CrazyIO\ByteUtil.cs" />
+    <Compile Include="CrazyCommon\CrazyIO\StreamBuffer.cs" />
+    <Compile Include="CrazyCommon\CrazyPerfCounter\PerfCounterAttribute.cs" />
+    <Compile Include="CrazyCommon\CrazyPerfCounter\PerfCounterCategoryAttribute.cs" />
+    <Compile Include="CrazyCommon\CrazyPerfCounter\PerfCounterFactory.cs" />
+    <Compile Include="CrazyCommon\CrazyPool\ArgsPoolTuples.cs" />
+    <Compile Include="CrazyCommon\Container\Vesseler.cs" />
+    <Compile Include="Net\Tcp\ShuttlerConnectionSlim.cs" />
+    <Compile Include="Net\Packets\IPacket.cs" />
+    <Compile Include="Net\Packets\PacketParser.cs" />
+    <Compile Include="Net\Packets\Protocol\Shuttler_ToChars.cs" />
+    <Compile Include="Net\Packets\Protocol\Shuttler_FromChars.cs" />
+    <Compile Include="Net\Packets\PacketBase.cs" />
+    <Compile Include="Utility\ProtocolBuffer\AsyncUtility.cs" />
+    <Compile Include="Utility\ProtocolBuffer\AttributeUtils.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Base128Variant.cs" />
+    <Compile Include="Utility\ProtocolBuffer\BufferExtension.cs" />
+    <Compile Include="Utility\ProtocolBuffer\CallbackAttributes.cs" />
+    <Compile Include="Utility\ProtocolBuffer\CloneStream.cs" />
+    <Compile Include="Utility\ProtocolBuffer\DataFormat.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Delegates.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Entity.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Extensible.cs" />
+    <Compile Include="Utility\ProtocolBuffer\ExtensibleUtil.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Formatter.cs" />
+    <Compile Include="Utility\ProtocolBuffer\GlobalOptions.cs" />
+    <Compile Include="Utility\ProtocolBuffer\IExtensible.cs" />
+    <Compile Include="Utility\ProtocolBuffer\IExtension.cs" />
+    <Compile Include="Utility\ProtocolBuffer\ImplicitFields.cs" />
+    <Compile Include="Utility\ProtocolBuffer\NonGeneric.cs" />
+    <Compile Include="Utility\ProtocolBuffer\ObjectFactory.cs" />
+    <Compile Include="Utility\ProtocolBuffer\PrefixStyle.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\Property.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\PropertyArray.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\PropertyBlob.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\PropertyBoolean.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\PropertyByte.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\PropertyChar.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\PropertyDateTimeFixed.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\PropertyDateTimeGroup.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\PropertyDateTimeString.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\PropertyDecimalGroup.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\PropertyDecimalString.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\PropertyDouble.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\PropertyEnum.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\PropertyEnumerable.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\PropertyFactory.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\PropertyGuidGroup.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\PropertyGuidString.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\PropertyInclude.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\PropertyInt16Variant.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\PropertyInt16ZigZag.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\PropertyInt32Fixed.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\PropertyInt32Variant.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\PropertyInt32ZigZag.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\PropertyInt64Fixed.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\PropertyInt64Variant.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\PropertyInt64ZigZag.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\PropertyList.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\PropertyMessageGroup.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\PropertyMessageString.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\PropertyNullable.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\PropertyPackedArray.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\PropertyPackedEnumerable.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\PropertyPackedList.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\PropertyPairString.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\PropertyParseable.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\PropertySByte.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\PropertySingle.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\PropertySpecified.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\PropertyString.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\PropertyTimeSpanFixed.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\PropertyTimeSpanGroup.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\PropertyTimeSpanString.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\PropertyUInt16Variant.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\PropertyUInt32Fixed.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\PropertyUInt32Variant.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\PropertyUInt64Fixed.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\PropertyUInt64Variant.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\PropertyUri.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Property\PropertyUtil.cs" />
+    <Compile Include="Utility\ProtocolBuffer\ProtoBcl\ProtoDecimal.cs" />
+    <Compile Include="Utility\ProtocolBuffer\ProtoBcl\ProtoGuid.cs" />
+    <Compile Include="Utility\ProtocolBuffer\ProtoBcl\ProtoTimeSpan.cs" />
+    <Compile Include="Utility\ProtocolBuffer\ProtoContractAttribute.cs" />
+    <Compile Include="Utility\ProtocolBuffer\ProtoEnumAttribute.cs" />
+    <Compile Include="Utility\ProtocolBuffer\ProtoException.cs" />
+    <Compile Include="Utility\ProtocolBuffer\ProtoFormat.cs" />
+    <Compile Include="Utility\ProtocolBuffer\ProtoIgnoreAttribute.cs" />
+    <Compile Include="Utility\ProtocolBuffer\ProtoIncludeAttribute.cs" />
+    <Compile Include="Utility\ProtocolBuffer\ProtoMemberAttribute.cs" />
+    <Compile Include="Utility\ProtocolBuffer\SerializationContext.cs" />
+    <Compile Include="Utility\ProtocolBuffer\SerializationContext.Read.cs" />
+    <Compile Include="Utility\ProtocolBuffer\SerializationContext.Write.cs" />
+    <Compile Include="Utility\ProtocolBuffer\Serializer.cs" />
+    <Compile Include="Utility\ProtocolBuffer\SerializerExt.cs" />
+    <Compile Include="Utility\ProtocolBuffer\SerializerProxy.cs" />
+    <Compile Include="Utility\ProtocolBuffer\SerializerT.cs" />
+    <Compile Include="Utility\ProtocolBuffer\ServiceModel\Client\HttpBasicTransport.cs" />
+    <Compile Include="Utility\ProtocolBuffer\ServiceModel\Client\IClientTransport.cs" />
+    <Compile Include="Utility\ProtocolBuffer\ServiceModel\Client\ProtoClient.cs" />
+    <Compile Include="Utility\ProtocolBuffer\ServiceModel\Client\ServiceRequest.cs" />
+    <Compile Include="Utility\ProtocolBuffer\ServiceModel\ExceptionEventArgs.cs" />
+    <Compile Include="Utility\ProtocolBuffer\ServiceModel\ProtoBehaviorAttribute.cs" />
+    <Compile Include="Utility\ProtocolBuffer\ServiceModel\ProtoBehaviorExtensionElement.cs" />
+    <Compile Include="Utility\ProtocolBuffer\ServiceModel\ProtoEndpointBehavior.cs" />
+    <Compile Include="Utility\ProtocolBuffer\ServiceModel\ProtoOperationBehavior.cs" />
+    <Compile Include="Utility\ProtocolBuffer\ServiceModel\RpcUtils.cs" />
+    <Compile Include="Utility\ProtocolBuffer\ServiceModel\Server\HttpServer.cs" />
+    <Compile Include="Utility\ProtocolBuffer\ServiceModel\Server\ServerBase.cs" />
+    <Compile Include="Utility\ProtocolBuffer\ServiceModel\XmlProtoSerializer.cs" />
+    <Compile Include="Utility\ProtocolBuffer\SubStream.cs" />
+    <Compile Include="Utility\ProtocolBuffer\UnexpectedDataException.cs" />
+    <Compile Include="Utility\ProtocolBuffer\UnknownType.cs" />
+    <Compile Include="Utility\ProtocolBuffer\WireType.cs" />
+    <Compile Include="Pandora\Rpc\ChannelMode.cs" />
+    <Compile Include="Pandora\Rpc\Channel\Http\Client\HttpRpcClient.cs" />
+    <Compile Include="Pandora\Rpc\Channel\Http\Client\HttpRpcClientTransport.cs" />
+    <Compile Include="Pandora\Rpc\Channel\Http\Server\HttpRpcServer.cs" />
+    <Compile Include="Pandora\Rpc\Channel\Http\Server\HttpRpcServerTransport.cs" />
+    <Compile Include="Pandora\Rpc\ClientImpl\IClientChannel.cs" />
+    <Compile Include="Pandora\Rpc\RpcProxy.cs" />
+    <Compile Include="Pandora\Rpc\Channel\Tcp\Client\TcpRpcClient.cs" />
+    <Compile Include="Pandora\Rpc\ClientImpl\IClientTransport.cs" />
+    <Compile Include="Pandora\Rpc\RpcContext.cs" />
+    <Compile Include="Pandora\Rpc\Channel\Tcp\Client\TcpRpcClientTransport.cs" />
+    <Compile Include="Pandora\Rpc\Channel\Tcp\Server\TcpRpcServer.cs" />
+    <Compile Include="Pandora\Rpc\Channel\Tcp\Server\TcpRpcServerTransport.cs" />
+    <Compile Include="Pandora\Rpc\RpcProxyManager.cs" />
+    <Compile Include="Pandora\Rpc\ServerImpl\IServerChannel.cs" />
+    <Compile Include="Pandora\Rpc\ServerImpl\IServerTransport.cs" />
+    <Compile Include="ShuttlerArtery.cs" />
+    <Compile Include="Utility\ArterySettings.cs" />
+    <Compile Include="CrazyCommon\CrazyPool\BufferPoolManager.cs" />
+    <Compile Include="Net\Events\EventHacker.cs" />
+    <Compile Include="Net\Events\ResponseEventArgs.cs" />
+    <Compile Include="Net\Events\TransationEventArgs.cs" />
+    <Compile Include="Net\Events\ConnectionEventArgs.cs" />
+    <Compile Include="Net\Events\StreamEventArgs.cs" />
+    <Compile Include="Net\Packets\Protocol\ShuttlerCommand.cs" />
+    <Compile Include="Net\Packets\Protocol\Shuttler_Tail.cs" />
+    <Compile Include="Net\Packets\Protocol\Shuttler_From.cs" />
+    <Compile Include="Net\Packets\Protocol\Shuttler_To.cs" />
+    <Compile Include="Net\Packets\Protocol\Global.cs" />
+    <Compile Include="Net\Packets\Protocol\Shuttler_Length.cs" />
+    <Compile Include="Net\Packets\Packet.cs" />
+    <Compile Include="Net\Packets\Protocol\Shuttler_Body.cs" />
+    <Compile Include="Net\Packets\Protocol\Shuttler_CallID.cs" />
+    <Compile Include="Net\Packets\Protocol\Shuttler_Command.cs" />
+    <Compile Include="Net\Packets\Protocol\Shuttler_Header.cs" />
+    <Compile Include="Net\Packets\Protocol\ShuttlerValue.cs" />
+    <Compile Include="Net\IConnection.cs" />
+    <Compile Include="Net\ConnectionManager.cs" />
+    <Compile Include="Net\SocketProtocol.cs" />
+    <Compile Include="Net\IListener.cs" />
+    <Compile Include="CrazyCommon\CrazyPool\SocketArgsPoolManager.cs" />
+    <Compile Include="Net\Packets\Request.cs" />
+    <Compile Include="Net\Packets\Response.cs" />
+    <Compile Include="Net\Tcp\TcpListener.cs" />
+    <Compile Include="Shuttler\ShuttlerAgent.cs" />
+    <Compile Include="Net\Tcp\ShuttlerConnection.cs" />
+    <Compile Include="Net\Events\ShuttlerEventArgs.cs" />
+    <Compile Include="Shuttler\ShuttlerAgentManager.cs" />
+    <Compile Include="Shuttler\Transaction\Transaction.cs" />
+    <Compile Include="Shuttler\Transaction\TransactionManager.cs" />
+    <Compile Include="Utility\ArteryPerfCounter.cs" />
+    <Compile Include="Utility\Utility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Utility\ProtocolBuffer\Web\TODO.txt" />
+    <Content Include="ShuttlerMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="key.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+    <Folder Include="Utility\ProtocolBuffer\Net\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
